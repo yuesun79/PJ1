@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>UpLoad</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/upload.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="home.html">Jupiter logo</a></li>
+                <li class="nav"><a href=home.html>首页</a></li>
+                <li class="nav"><a href=browser.html>浏览</a></li>
+                <li class="nav"><a href=search.html>搜索</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">用户</button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="upload.html"><img src="../images/icon/上传.png" alt="upload">上传</a>
+                    <a class="dropdown-item" href="collections.html"><img src="../images/icon/照片3.png" alt="my photos">我的</a>
+                    <a class="dropdown-item" href="favorites.html"><img src="../images/icon/收藏1.png" alt="likes">收藏</a>
+                    <a class="dropdown-item" href="../index.html"><img src="../images/icon/登录.png" alt="log in">登录</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <form action="#" method="post">
+
+        <input type="file" accept="image/*" multiple onchange="showImg(this)">
+        <img src="" alt="" id="img">
+        <script>
+            function showImg(obj) {
+                var file=$(obj)[0].files[0];    //获取文件信息
+                var imgdata='';
+                if(file)
+                {
+                    var reader=new FileReader();  //调用FileReader
+                    reader.readAsDataURL(file); //将文件读取为 DataURL(base64)
+                    reader.onload=function(evt){   //读取操作完成时触发。
+                        $("#img").attr('src',evt.target.result)  //将img标签的src绑定为DataURL
+                    };
+                }
+                else{
+                    alert("上传失败");
+                }
+            }
+        </script>
+
+        <label>图片标题 <br>
+            <input class="normal" type="text">
+        </label>
+
+        <label>图片描述 <br>
+            <textarea name="图片描述" cols="100%" rows="10" wrap="soft"></textarea>
+        </label> <br>
+
+        <label>拍摄国家 <br>
+            <input class="normal" type="text">
+        </label>
+
+        <label>拍摄城市 <br>
+            <input class="normal" type="text">
+        </label>
+        <input class="button" type="submit" value="上传" name="上传" onclick="window.location.href='collections.html'">
+
+    </form>
+
+    <footer>
+        备案号：18307110426
+    </footer>
+
+</body>
+</html>

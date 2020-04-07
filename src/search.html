@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Jupiter-Search</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/search.css">
+    </head>
+
+    <body>
+    <header>
+        <nav>
+        <ul>
+            <li class="logo"><a href="home.html">Jupiter logo</a></li>
+            <li class="nav"><a href=home.html>首页</a></li>
+            <li class="nav"><a href=browser.html>浏览</a></li>
+            <li class="nav this-page"><a href=search.html>搜索</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="dropbtn">用户</button>
+            <div class="dropdown-content">
+                <a class="dropdown-item" href="upload.html"><img src="../images/icon/上传.png" alt="upload">上传</a>
+                <a class="dropdown-item" href="collections.html"><img src="../images/icon/照片3.png" alt="my photos">我的</a>
+                <a class="dropdown-item" href="favorites.html"><img src="../images/icon/收藏1.png" alt="likes">收藏</a>
+                <a class="dropdown-item" href="../index.html"><img src="../images/icon/登录.png" alt="log in">登录</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section>
+        <div class="search">
+            <form method="post" action="#">
+                <div>
+                    <label>
+                        <input class="radio-type" type="radio" name="search-bar" value="title-search" checked>
+                        标题搜索
+                    </label>
+                    <input type="text" name="search">
+
+                    <label>
+                        <input class="radio-type" type="radio" name="search-bar" value="content-search">
+                        内容搜索
+                    </label>
+                    <textarea name="content-search" cols="auto" rows="5"></textarea>
+                    <br>
+                    <input type="submit" name="go" value="搜索" onclick="alert('假装搜索一下')">
+                </div>
+            </form>
+        </div>
+
+        <div class="result">
+            <figure>
+                <img src="../images/normal/medium/8646991554.jpg" alt="pic1">
+                <figcaption>
+                    <h2>TITLE</h2>
+                    <p>Bonjour! These are some silly words: There should be some details for the whole picture. But actually I dont known what to say.
+                        Ewwww,this is a beautiful picture,does it? Do you like it? Actually this website has mounts of pictures. Lets explore!
+                        Why its so hard to full the whole two lines, hoping I can finally fix this.
+                    </p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../images/normal/medium/9494470337.jpg" alt="pic2">
+                <figcaption>
+                    <h2>TITLE</h2>
+                    <p>Bonjour! These are some silly words: There should be some details for the whole picture. But actually I dont known what to say.
+                        Ewwww,this is a beautiful picture,does it? Do you like it? Actually this website has mounts of pictures. Lets explore!
+                        Why its so hard to full the whole two lines, hoping I can finally fix this.</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/normal/medium/8152016381.jpg" alt="pic3">
+                <figcaption>
+                    <h2>TITLE</h2>
+                    <p>Bonjour! These are some silly words: There should be some details for the whole picture. But actually I dont known what to say.
+                        Ewwww,this is a beautiful picture,does it? Do you like it? Actually this website has mounts of pictures. Lets explore!
+                        Why its so hard to full the whole two lines, hoping I can finally fix this.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../images/normal/medium/8152045872.jpg" alt="pic4">
+                <figcaption>
+                    <h2>TITLE</h2>
+                    <p>Bonjour! These are some silly words: There should be some details for the whole picture. But actually I dont known what to say.
+                        Ewwww,this is a beautiful picture,does it? Do you like it? Actually this website has mounts of pictures. Lets explore!
+                        Why its so hard to full the whole two lines, hoping I can finally fix this.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../images/normal/medium/9504606628.jpg" alt="pic5">
+                <figcaption>
+                    <h2>TITLE</h2>
+                    <p>Bonjour! These are some silly words: There should be some details for the whole picture. But actually I dont known what to say.
+                        Ewwww,this is a beautiful picture,does it? Do you like it? Actually this website has mounts of pictures. Lets explore!
+                        Why its so hard to full the whole two lines, hoping I can finally fix this.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="page">< <span>1</span> 2 3 4 5 ></div>
+    </section>
+
+    <footer><p>备案号：18307110426</p></footer>
+    </body>
+</html>

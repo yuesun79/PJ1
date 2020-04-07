@@ -1,0 +1,130 @@
+.search,.result {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/*搜索版块*/
+
+.search div {
+    padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    /*border: 2px solid crimson;*/
+}
+
+.search input[type="text"] {
+    border: none;
+    border-radius:5px;
+    background-color:rgba(241,241,241,.98);
+    padding: 20px;
+    height: 40px;
+    outline: none;
+    width: auto;
+    margin: 20px;
+}
+.search textarea {
+    border: none;
+    border-radius:5px;
+    background-color:rgba(241,241,241,.98);
+    resize: none;
+    width: auto;
+    outline: none;
+    padding: 10px;
+    margin: 20px;
+}
+
+input[type='submit'] {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 20px;
+    background-color: indianred;
+    color: white;
+    height: 2.5rem;
+    width: 8rem;
+    text-align: center;
+}
+
+/*结果图片展示*/
+
+.result figure{
+    /*border: 1px solid crimson;*/
+    height: 260px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+figure:first-of-type {
+    margin-top: 30px;
+}
+
+.result img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 0 30px 30px 30px;
+}
+
+/*文字描述*/
+
+h2 {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: center;
+}
+
+figcaption p {
+    /*border: 1px solid crimson;*/
+    line-height: 1.2rem;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+}
+
+.result figcaption {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    height: 180px;
+    width: auto;
+    margin: 30px;
+    padding: 40px 20px;
+}
+
+@media (max-width: 760px) {
+    .result {
+        border: none;
+    }
+    .result figure{
+        height: 440px;
+        flex-flow: column nowrap;
+    }
+    .result img {
+        margin: 0 auto;
+    }
+    .result figcaption {
+        margin: 30px 0;
+        padding: 20px;
+        height: 150px;
+    }
+    figcaption p {
+        -webkit-line-clamp: 3; /** 显示的行数 **/
+    }
+
+}
+
+.page {
+    color: #888888;
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 2px 2px 3px #999999;
+}
+.page span {
+    color: black;
+}
+
