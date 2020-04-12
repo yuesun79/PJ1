@@ -1,6 +1,7 @@
 * {
     line-height: 1.4rem;
 }
+
 figure {
     display: flex;
     flex-flow: row wrap;
@@ -33,15 +34,31 @@ figcaption {
 
 }
 
+/*下面具体描述*/
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.description {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 0 10% 60px 10%;
+    padding: 20px;
+}
+
 @media (max-width: 1100px) {
     .description {
         margin: 0 5% 60px 5%;
-
     }
+
     figure img {
         padding: 60px 0;
         width: 90vw;
     }
+
     figcaption {
         width: 90%;
         margin: 0 5% 40px 5%;
@@ -49,13 +66,14 @@ figcaption {
         justify-content: space-around;
         padding: 5px 5px 20px 5px;
     }
+
     figcaption div {
         margin: 0 40px;
     }
+
     #like-button input {
         margin: 35px 0;
     }
-
 }
 
 @media (max-width: 740px) {
@@ -68,21 +86,26 @@ figcaption {
     h2 {
         font-size: 1.4rem;
     }
+
     p {
         line-height: 1.5rem;
         font-size: 1.2rem;
     }
+
     figcaption {
         flex-flow: row wrap;
         padding: 0;
     }
+
     figcaption div {
         width: 50%;
         text-align: center;
     }
+
     #like-button input {
         margin:0;
     }
+
     figure img {
         padding: 40px 0;
     }
@@ -118,18 +141,5 @@ input[type='button'] {
     margin: 10px -5px;
 }
 
-/*下面具体描述*/
 
-section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.description {
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin: 0 10% 60px 10%;
-    padding: 20px;
-}
 

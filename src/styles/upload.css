@@ -70,7 +70,7 @@
         height: auto;
     }
 
-    .upload-content {
+    form.upload-content {
         border: none;
         margin: 0;
     }
@@ -125,5 +125,9 @@ textarea {
     outline: none;
     margin: 20px 0;
     padding: 10px;
+}
+
+input.button {
+    margin-top: 20px;
 }
 

@@ -23,6 +23,7 @@ input[type='button'] {
     .result figcaption {
         padding: 0 20px;
     }
+
     figcaption p {
         -webkit-line-clamp: 2; /** 显示的行数 **/
     }

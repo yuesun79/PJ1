@@ -39,7 +39,7 @@ input[type='submit'] {
     border: none;
     border-radius: 5px;
     outline: none;
-    margin: 10px 30px 30px 30px;
+    margin: 0 20px 20px 20px;
     background-color: indianred;
     color: white;
     height: 2.5rem;
@@ -111,6 +111,7 @@ figure:first-of-type {
 }
 
 .result img {
+    background-color: rgba(255, 178, 95, 0.6);
     width: 230px;
     height: 230px;
     min-width: 230px;

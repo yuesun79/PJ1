@@ -25,12 +25,14 @@ aside {
     margin: 30px 0;
     padding: 0;
 }
+
 .search-bar form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
 }
+
 .search-bar input{
     border: 2px solid #787878;
     height: 40px;
@@ -38,20 +40,21 @@ aside {
     outline: none;
     font-size: 1rem;
 }
+
 .search {
     border-radius: 42px;
     margin: 0 10px;
 }
+
 .search:focus {
     background-color: rgba(0, 0, 0, 0.2);
-    /*border: 3px solid indianred;*/
     border: white;
 }
 
 .search:focus::-webkit-input-placeholder {
     color: white;
- }
-/*顺序很重要*/
+ }/*顺序很重要*/
+
 #GO-search {
     width: 40px;
     border-radius: 50%;
@@ -62,6 +65,7 @@ aside {
 }
 
 /*边栏的热门*/
+
 .hot-thing div {
     width: 100%;
     text-align: center;
@@ -105,9 +109,11 @@ aside {
 .third-hot {
     background-image: url("../../images/icon/城市.png");
 }
+
 .hot-thing a:hover {
     background-color: rgba(220, 220, 220, 0.74);
 }
+
 .hot-thing a:only-of-type:hover {
     background-color: #787878;
 }
@@ -127,6 +133,7 @@ aside {
     justify-content: center;
     margin: 20px;
 }
+
 .filter select,.filter input {
     display: inline-block;
     width: 120px;
@@ -134,13 +141,16 @@ aside {
     margin: 0 40px 10px 40px;
     font-size: 1rem;
 }
+
 .filter select {
     text-align: center;
     text-align-last: center;
 }
+
 .filter option {
     text-align: center;
 }
+
 .filter input {
     border-radius: 6px;
     background-color: #787878;
@@ -154,16 +164,18 @@ aside {
     flex-flow: row wrap;
     justify-content: center;
 }
+
 .hot-figures figure {
     box-shadow: gray 0 0 10px;
     width: 220px;
     height: 220px;
     margin: 20px;
 }
+
 .hot-figures img {
     /*max-width: 200px;之前这样调试图片的效果还满"神奇的"*/
     /*min-height: 200px;*/
-    background-color: lightgrey;
+    background-color: rgba(255, 178, 95, 0.6);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -173,38 +185,47 @@ aside {
     .search {
         margin: 0 40px;
     }
+
     section {
         flex-flow: column nowrap;
     }
+
     aside {
         width: 100%;
         margin: 0;
     }
+
     .small-screen {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
     }
+
     .hot-thing div a {
         padding: 0 0.6rem 0 1.1rem;
         margin-left: 0.5rem;
         background-repeat: no-repeat;
         color: white;
     }
+
     .browser-content {
         margin: 0;
         border: none;
         width: 100%;
     }
+
     .filter {
         margin: 0;
     }
+
     .filter select,.filter input {
         margin: 0 10px 10px 10px;
     }
+
     .filter select {
         border-radius: 6px;
     }
+
     .hot-figures figure {
         /*max-width: 300px;*/
         margin: 20px 0;
@@ -212,22 +233,20 @@ aside {
         height: 300px;
         padding: 0;
     }
-    /*.hot-figures img {*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*    object-fit: cover;*/
-    /*}*/
+
     .hot-figures figure:first-of-type {
         margin-top: 30px;
     }
 
 }
+
 .page {
     color: #888888;
     text-align: center;
     padding: 20px 0;
     text-shadow: 2px 2px 3px #999999;
 }
+
 .page span {
     color: black;
 }
