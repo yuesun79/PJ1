@@ -7,27 +7,13 @@ figure {
     justify-content: center;
 }
 
-section {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.description {
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin: 0 10% 60px 10%;
-    padding: 20px;
-}
-
 /*图片*/
 
 figure img {
     max-width: 100%;
     height: auto;
     padding: 60px 40px;
-}
-/*还算比较重要 让它显示本来大小*/
+}  /*还算比较重要 让它显示本来大小*/
 
 /*右侧信息*/
 
@@ -132,4 +118,18 @@ input[type='button'] {
     margin: 10px -5px;
 }
 
+/*下面具体描述*/
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.description {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 0 10% 60px 10%;
+    padding: 20px;
+}
 

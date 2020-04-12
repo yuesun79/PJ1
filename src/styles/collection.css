@@ -1,6 +1,9 @@
 .result figcaption {
     padding: 20px;
 }
+
+/*新多出来的按钮样式*/
+
 .result .another-button {
     background-color: #FFFFFF;
     border: 1px solid  indianred;
@@ -15,6 +18,7 @@
 input[type='button'] {
     margin: 20px 5px;
 }
+
 @media (max-width: 760px) {
     .result figcaption {
         padding: 0 20px;

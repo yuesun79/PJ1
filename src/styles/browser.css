@@ -32,7 +32,7 @@ aside {
     text-align: center;
 }
 .search-bar input{
-    border: 2px solid indianred;
+    border: 2px solid #787878;
     height: 40px;
     text-align: center;
     outline: none;
@@ -43,7 +43,7 @@ aside {
     margin: 0 10px;
 }
 .search:focus {
-    background-color: rgba(205, 92, 92, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     /*border: 3px solid indianred;*/
     border: white;
 }
@@ -52,12 +52,13 @@ aside {
     color: white;
  }
 /*顺序很重要*/
-input.GO-search {
+#GO-search {
     width: 40px;
     border-radius: 50%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
 }
 
 /*边栏的热门*/
@@ -74,6 +75,7 @@ input.GO-search {
     line-height: 40px;
     text-align: center;
     border-bottom: rgba(136, 136, 136, 0.65) 0.3px solid;
+    cursor: pointer;
 }
 
 .hot-thing div a{
@@ -103,9 +105,11 @@ input.GO-search {
 .third-hot {
     background-image: url("../../images/icon/城市.png");
 }
-
 .hot-thing a:hover {
     background-color: rgba(220, 220, 220, 0.74);
+}
+.hot-thing a:only-of-type:hover {
+    background-color: #787878;
 }
 
 .hot-thing {
@@ -126,14 +130,11 @@ input.GO-search {
 .filter select,.filter input {
     display: inline-block;
     width: 120px;
-    height: 30px;
+    height: 36px;
     margin: 0 40px 10px 40px;
-    border-radius: 10px;
-    font-size: 14px;
-    outline: none;
+    font-size: 1rem;
 }
 .filter select {
-    border: 1px solid indianred;
     text-align: center;
     text-align-last: center;
 }
@@ -141,7 +142,9 @@ input.GO-search {
     text-align: center;
 }
 .filter input {
-    border: 2px solid indianred;
+    border-radius: 6px;
+    background-color: #787878;
+    color: white;
 }
 
 /*热门图片*/
@@ -153,19 +156,23 @@ input.GO-search {
 }
 .hot-figures figure {
     box-shadow: gray 0 0 10px;
-    max-width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     margin: 20px;
 }
 .hot-figures img {
     /*max-width: 200px;之前这样调试图片的效果还满"神奇的"*/
     /*min-height: 200px;*/
+    background-color: lightgrey;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
+    .search {
+        margin: 0 40px;
+    }
     section {
         flex-flow: column nowrap;
     }
@@ -178,6 +185,12 @@ input.GO-search {
         flex-flow: row nowrap;
         justify-content: center;
     }
+    .hot-thing div a {
+        padding: 0 0.6rem 0 1.1rem;
+        margin-left: 0.5rem;
+        background-repeat: no-repeat;
+        color: white;
+    }
     .browser-content {
         margin: 0;
         border: none;
@@ -189,9 +202,23 @@ input.GO-search {
     .filter select,.filter input {
         margin: 0 10px 10px 10px;
     }
+    .filter select {
+        border-radius: 6px;
+    }
     .hot-figures figure {
-        max-width: 300px;
+        /*max-width: 300px;*/
+        margin: 20px 0;
+        width: 300px;
         height: 300px;
+        padding: 0;
+    }
+    /*.hot-figures img {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    object-fit: cover;*/
+    /*}*/
+    .hot-figures figure:first-of-type {
+        margin-top: 30px;
     }
 
 }

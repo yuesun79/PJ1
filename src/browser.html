@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Jupiter-Browser</title>
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/home.css">
-        <link rel="stylesheet" href="styles/browser.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jupiter-Browser</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/browser.css">
+</head>
+<body>
 
     <header>
         <nav>
@@ -31,16 +31,17 @@
     </header>
 
     <section>
-        <aside>
-            <div class="search-bar">
-                <form action="#">
-                    <input class="search" type="text" name="search" placeholder="标题搜索">
-                    <input class="GO-search" type="submit" value="GO" onclick="alert('还不能搜索呢～')">
+        <aside><!--             侧边栏-->
+
+            <div class="search-bar"><!--             搜索-->
+                <form action="#" method="get">
+                    <input class="search" type="text" name="search" placeholder="标题搜索" autocomplete="off" onclick="document.getElementById('GO-search').style.opacity='1'">
+                    <input id="GO-search" type="submit" value="GO" onclick="alert('还不能搜索呢～')">
                 </form>
             </div>
 
             <div class="small-screen">
-                <div class="hot-thing">
+                <div class="hot-thing"><!--             热门展示-->
                     <div>
                         <a class="first-hot" onclick="alert('好的 知道你点了')">热门内容<img class="tip" src="../images/icon/三角右.png" alt="图标"></a>
                     </div>
@@ -50,6 +51,7 @@
                     <a onclick="alert('好的 知道你点了')">建筑</a>
                     <a onclick="alert('好的 知道你点了')">人物</a>
                 </div>
+
                 <div class="hot-thing">
                     <div>
                         <a class="second-hot" onclick="alert('好的 知道你点了')">热门国家<img class="tip" src="../images/icon/三角右.png" alt="图标"></a>
@@ -60,6 +62,7 @@
                     <a onclick="alert('好的 知道你点了')">泰国</a>
                     <a onclick="alert('好的 知道你点了')">美国</a>
                 </div>
+
                 <div class="hot-thing">
                     <div>
                         <a class="third-hot" onclick="alert('好的 知道你点了')">热门城市<img class="tip" src="../images/icon/三角右.png" alt="图标"></a>
@@ -74,8 +77,9 @@
 
         </aside>
 
-        <div class="browser-content">
-            <div class="filter">
+        <div class="browser-content"><!--             右侧浏览部分-->
+
+            <div class="filter"><!--             筛选-->
                 <select name="内容筛选" id="contect">
                     <option value="风景">风景</option>
                     <option value="动物">动物</option>
@@ -84,8 +88,10 @@
                     <option value="人物">人物</option>
                 </select>
                 <select name="国家筛选" id="country" onchange="select(this)">
+
                 </select>
                 <select name="城市筛选" id="city">
+
                 </select>
                 <input type="submit" name="浏览页搜索" value="搜索" onclick="alert('暂不能搜索结果')">
 
@@ -96,7 +102,7 @@
 
                     for (var i in data){
                         var option_country = document.createElement("option");
-                        option_country.innerHTML=i;
+                        option_country.innerHTML = i;
                         country.appendChild(option_country);
                     }
 
@@ -104,7 +110,7 @@
                         var choice = (self.options[self.selectedIndex]).innerHTML;
 
                         var options = city.children;
-                        for (var k=0; k<options.length; k++){
+                        for (var k = 0; k < options.length; k++){
                             city.removeChild(options[k--]);
                         }
 
@@ -122,10 +128,12 @@
                     <a href="detail-pages.html"><img src="../images/normal/medium/WechatIMG25.jpeg" alt="pic1"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/WechatIMG30%20.jpeg" alt="pic2"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/5855735700.jpg" alt="pic3"></a>
                     <figcaption></figcaption>
@@ -135,49 +143,62 @@
                     <a href="detail-pages.html"><img src="../images/normal/medium/5856616479.jpg" alt="pic4"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/WechatIMG26.jpeg" alt="pic5"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/8731523536.jpg" alt="pic6"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/8645912379.jpg" alt="pic7"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/WechatIMG28%20.jpeg" alt="pic8"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/5855213165.jpg" alt="pic9"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/6592317633.jpg" alt="pic10"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/8152045688.jpg" alt="pic11"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/5856654945.jpg" alt="pic12"></a>
-                    <figcaption></figcaption></figure>
+                    <figcaption></figcaption>
+                </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/WechatIMG31.jpeg" alt="pic13"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/6114850721.jpg" alt="pic14"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/9493997865.jpg" alt="pic15"></a>
                     <figcaption></figcaption>
                 </figure>
+
                 <figure>
                     <a href="detail-pages.html"><img src="../images/normal/medium/5856697109.jpg" alt="pic16"></a>
                     <figcaption></figcaption>
@@ -189,9 +210,6 @@
 
     </section>
 
-
-
-
     <footer><p>备案号：18307110426</p></footer>
-    </body>
+</body>
 </html>

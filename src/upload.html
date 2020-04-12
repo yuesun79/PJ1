@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/upload.css">
-    
 </head>
+
 <body>
+
     <header>
         <nav>
             <ul>
-                <li class="logo"><a href="home.html">Jupiter logo</a></li>
+                <li class="logo"  id="top"><a href="home.html">Jupiter logo</a></li>
                 <li class="nav"><a href=home.html>首页</a></li>
                 <li class="nav"><a href=browser.html>浏览</a></li>
                 <li class="nav"><a href=search.html>搜索</a></li>
@@ -21,7 +22,7 @@
             <div class="dropdown">
                 <button class="dropbtn">用户</button>
                 <div class="dropdown-content">
-                    <a class="dropdown-item" href="upload.html"><img src="../images/icon/上传.png" alt="upload">上传</a>
+                    <a class="dropdown-item dropdown-this-page" href="upload.html"><img src="../images/icon/上传.png" alt="upload">上传</a>
                     <a class="dropdown-item" href="collections.html"><img src="../images/icon/照片3.png" alt="my photos">我的</a>
                     <a class="dropdown-item" href="favorites.html"><img src="../images/icon/收藏1.png" alt="likes">收藏</a>
                     <a class="dropdown-item" href="../index.html"><img src="../images/icon/登录.png" alt="log in">登录</a>
@@ -29,35 +30,67 @@
             </div>
         </nav>
     </header>
-    <form action="#" method="post">
 
-        <input type="file" accept="image/*" multiple onchange="showImg(this)">
-        <img src="" alt="" id="img">
+    <form action="#" method="get" class="upload-picture">
+        <div id="box">
+
+        </div>
+        <a class="file">上传图片
+            <input id="file" type="file">
+        </a>
+
+
         <script>
-            function showImg(obj) {
-                var file=$(obj)[0].files[0];    //获取文件信息
-                var imgdata='';
-                if(file)
-                {
-                    var reader=new FileReader();  //调用FileReader
-                    reader.readAsDataURL(file); //将文件读取为 DataURL(base64)
-                    reader.onload=function(evt){   //读取操作完成时触发。
-                        $("#img").attr('src',evt.target.result)  //将img标签的src绑定为DataURL
-                    };
+            //获取页面元素对象
+            var file = document.getElementById('file');
+            var output = document.getElementById('box');
+            //onchange事件
+            file.onchange = function (e) {
+                console.log(e);
+                var files = e.target.files;
+                var file0 = files[0];
+                console.log(file0.size,file0.name,file0.type);
+                //fileReader对象
+                var fileReader = new FileReader();
+                var type = 'default';
+                //判断文件类型
+                if(/image/.test(file0.type)){
+                    fileReader.readAsDataURL(file0);
+                    type = 'image';
+                } else {
+                    fileReader.readAsText(file0,'utf-8');
+                    type = 'text';
                 }
-                else{
-                    alert("上传失败");
-                }
+                //文件加载出错
+                fileReader.onerror = function () {
+                    output.innerHTML = 'Could not read file, error code is ' + fileReader.error.code;
+                };
+                //加载成功后
+                fileReader.onload = function () {
+                    console.log('onload')
+                    var html = '';
+                    switch (type) {
+                        case 'image':
+                            html = '<img src=\"' + fileReader.result +'\">';
+                            break;
+                        case 'text':
+                            html = fileReader.result;
+                            break;
+                    }
+                    output.innerHTML = html;
+                };
             }
         </script>
+    </form>
 
+    <form action="#" method="get" class="upload-content">
         <label>图片标题 <br>
             <input class="normal" type="text">
         </label>
 
         <label>图片描述 <br>
             <textarea name="图片描述" cols="100%" rows="10" wrap="soft"></textarea>
-        </label> <br>
+        </label>
 
         <label>拍摄国家 <br>
             <input class="normal" type="text">
@@ -66,13 +99,10 @@
         <label>拍摄城市 <br>
             <input class="normal" type="text">
         </label>
-        <input class="button" type="submit" value="上传" name="上传" onclick="window.location.href='collections.html'">
+        <input class="button" type="button" value="上传" name="上传" onclick="alert('上传成功啦');window.location.href='collections.html'">
 
     </form>
 
-    <footer>
-        备案号：18307110426
-    </footer>
-
+    <footer><p>备案号：18307110426</p></footer>
 </body>
 </html>
